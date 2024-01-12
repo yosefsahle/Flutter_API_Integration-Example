@@ -1,4 +1,8 @@
-# sampleapp
+# Flutter API Integration Example
+# Hotel Recipe List
+
+# Use Your Own Yummly API KEY
+- [Link: Check the link to get Your Own KEY](https://rapidapi.com/apidojo/api/yummly2)
 
 A new Flutter project.
 
