@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sampleapp/views/book.dart';
 import 'views/home.dart';
 
 void main() {
@@ -19,7 +20,7 @@ class MyApp extends StatelessWidget {
           textTheme: TextTheme(
             bodyMedium: TextStyle(color: Colors.white),
           )),
-      home: HomePage(),
+      home: BookPage(),
     );
   }
 }
