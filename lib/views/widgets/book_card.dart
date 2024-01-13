@@ -16,9 +16,11 @@ class BookCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      shadowColor: Colors.black,
+      elevation: 120,
       color: Colors.blueGrey[400],
       child: Padding(
-        padding: EdgeInsets.only(left: 5, right: 5),
+        padding: EdgeInsets.only(left: 5, right: 5, bottom: 5),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
@@ -28,33 +30,22 @@ class BookCard extends StatelessWidget {
               height: 120,
             ),
             Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
                   title,
-                  style: TextStyle(fontSize: 20, color: Colors.white),
+                  style: TextStyle(
+                    fontSize: 20,
+                    color: Colors.white,
+                  ),
+                  textAlign: TextAlign.end,
                 ),
-                Text(author,
-                    style: TextStyle(fontSize: 14, color: Colors.white60))
+                Text(
+                  author,
+                  style: TextStyle(fontSize: 14, color: Colors.yellow),
+                  textAlign: TextAlign.right,
+                )
               ],
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                Icon(
-                  Icons.file_open,
-                  color: Colors.white,
-                ),
-                Icon(
-                  Icons.download,
-                  color: Colors.white,
-                ),
-                Icon(
-                  Icons.favorite_border,
-                  color: Colors.white,
-                ),
-              ],
-            )
           ],
         ),
       ),
