@@ -1,7 +1,17 @@
 import 'package:flutter/material.dart';
 
 class BookCard extends StatelessWidget {
-  const BookCard({super.key});
+  final String id;
+  final String image;
+  final String title;
+  final String author;
+
+  BookCard({
+    required this.id,
+    required this.image,
+    required this.title,
+    required this.author,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -13,7 +23,7 @@ class BookCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Image.network(
-              'https://m.media-amazon.com/images/I/51CK14JMN2L._AC_UF1000,1000_QL80_.jpg',
+              image,
               fit: BoxFit.contain,
               height: 120,
             ),
@@ -21,10 +31,10 @@ class BookCard extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Text(
-                  'Book Title',
+                  title,
                   style: TextStyle(fontSize: 20, color: Colors.white),
                 ),
-                Text('Author',
+                Text(author,
                     style: TextStyle(fontSize: 14, color: Colors.white60))
               ],
             ),
